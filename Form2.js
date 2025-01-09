@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 
 function Form2() {
-    const [data, setdata] = useState({
-        name: "",
-        rollno: "",
-        gender: "",
-        city: "",
-        phone: ""
-    });
+    const [data, setdata] = useState({name: "",rollno: "",gender: "",city: "",phone: "" });
 
-    function formSubmit(e) {
-        e.preventDefault()
-
+    function formSubmit(a) {
+        a.preventDefault()
         console.log("....sucess", data);
     }
 
@@ -20,38 +13,21 @@ function Form2() {
             <form onSubmit={formSubmit}>
                 <div>
                 Name:
-                <input
-                    type="text"
-                    onChange={(e) => setdata({ ...data, name: e.target.value })}
-                />
+                <input type="text" onChange={(data) => setdata({ ...data, name: data.target.value })}/>
                 </div>
                 <div>
                 Rollno:
-                <input
-                    type="text"
-                    onChange={(e) => setdata({ ...data, rollno: e.target.value })}
-                />
+                <input type="text" onChange={(data) => setdata({ ...data, rollno: data.target.value })}/>
                 </div>
                 <div>
                 City:
-                <input
-                    type="text"
-                    onChange={(e) => setdata({ ...data, city: e.target.value })}
-                />
+                <input type="text" onChange={(data) => setdata({ ...data, city: data.target.value })} />
                 </div>
                 <div>
-                Gender:
-                <input
-                    type="text"
-                    onChange={(e) => setdata({ ...data, gender: e.target.value })}
-                />
+                Gender: <input type="text" onChange={(data) => setdata({ ...data, gender: data.target.value })}/>
                 </div>
                 <div>
-                Phone:
-                <input
-                    type="text"
-                    onChange={(e) => setdata({ ...data, phone: e.target.value })}
-                />
+                Phone: <input type="text" onChange={(data) => setdata({ ...data, phone: data.target.value })} />
                 </div>
                 <div>
                 <button type="submit">Signup</button>
